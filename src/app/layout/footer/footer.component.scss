@@ -1,0 +1,40 @@
+h2 {
+    color: #5f9c9c;
+}
+
+.global {
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    #1f4a4a 0%,
+    #2a5757 40%,
+    #3e7777 70%,
+    #5f9c9c 100%
+  );
+  color: white;
+}
+
+.footer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 20px;
+  display: flex;
+  gap: 100px;
+}
+
+.footer [class^="container"] {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+[class*="nav"] {
+  background: transparent;
+  border: none;
+  color: #E0FFFF;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s ease;
+}
+
