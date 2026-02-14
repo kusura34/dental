@@ -1,8 +1,6 @@
 <header class="global">
   <div class="header">
-
     <div class="top">
-
       <div class="logo-container">
         <img src="logo/logo.svg" alt="Dental Logo" />
       </div>
@@ -11,6 +9,33 @@
         <h1 class="title">Оказываем первую помощь без очереди</h1>
         <p class="subtitle">Ваша здоровая улыбка — наша забота</p>
       </div>
+
+      <button class="burger" (click)="toggleMenu()">
+        <img style="width: 30px;" src="/icons/menu.svg" alt="" />
+      </button>
+
+      <div class="overlay" [class.show]="isOpen" (click)="closeMenu()"></div>
+
+      <nav class="mobile-menu" [class.open]="isOpen">
+        <button class="close" (click)="closeMenu()">✕</button>
+
+        <div class="mobile-links">
+          <button class="mobile-link" (click)="closeMenu()">Главная</button>
+          <button class="mobile-link" (click)="closeMenu()">О нас</button>
+          <button class="mobile-link" (click)="closeMenu()">Акции</button>
+          <button class="mobile-link" (click)="closeMenu()">Услуги</button>
+          <button class="mobile-link" (click)="closeMenu()">Врачи</button>
+          <button class="mobile-link" (click)="closeMenu()">Отзывы</button>
+          <button class="mobile-link" (click)="closeMenu()">Контакты</button>
+        </div>
+
+        <div class="mobile-contacts">
+          <p>(123) 456-7890</p>
+          <p>info&#64;dental.com</p>
+        </div>
+
+        <button class="mobile-cta">Записаться</button>
+      </nav>
 
       <div class="contact-info">
         <div class="phone">
@@ -25,7 +50,6 @@
 
         <button class="cta">Записаться</button>
       </div>
-
     </div>
 
     <nav class="navigation">
@@ -37,6 +61,5 @@
       <button class="nav-button">Отзывы</button>
       <button class="nav-button">Контакты</button>
     </nav>
-
   </div>
 </header>
