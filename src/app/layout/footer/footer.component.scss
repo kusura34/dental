@@ -38,4 +38,38 @@ h2 {
   font-weight: 500;
   transition: 0.2s ease;
 }
+//TABLETS
+@media (max-width: 1024px) {
+
+  .footer {
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  .footer > div {
+    flex: 1 1 45%;
+  }
+
+}
+//MOBILES
+@media (max-width: 767px) {
+
+  .footer {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .footer > div {
+    flex: 1 1 45%;
+  }
+
+  .container-logo {
+    flex: 1 1 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+}
+
 
