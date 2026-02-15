@@ -1,0 +1,91 @@
+* {
+    color: black;
+}
+
+.global {
+  background: #2A5757;
+}
+
+/* HERO */
+.banner {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 40px;
+}
+
+/* Текст */
+.banner-content {
+  flex: 1;
+  color: white;
+  z-index: 2;
+  max-width: 500px;
+}
+
+.banner-content h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.banner-content p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+/* Кнопка */
+.banner-btn {
+  padding: 14px 30px;
+  background: white;
+  color: #2A5757;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.banner-btn:hover {
+  background: #E0FFFF;
+}
+
+/* Картинка */
+.banner-image {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+}
+
+.banner-image img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  /* магия растворения */
+  mask-image: linear-gradient(to left, black 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 200px; /* регулируй */
+  height: 100%;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    rgba(42, 87, 87, 0) 0%,
+    rgba(42, 87, 87, 0.4) 40%,
+    rgba(42, 87, 87, 0.8) 70%,
+    #2A5757 100%
+  );
+}
+
