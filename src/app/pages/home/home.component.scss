@@ -1,7 +1,3 @@
-* {
-    color: black;
-}
-
 .global {
   background: #2A5757;
 }
@@ -76,7 +72,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 200px; /* регулируй */
+  width: 200px;
   height: 100%;
   pointer-events: none;
 
@@ -88,4 +84,78 @@
     #2A5757 100%
   );
 }
+//TABLETS
+@media (max-width: 1200px) {
 
+  .banner {
+    min-height: 70vh;
+    padding: 0 30px;
+  }
+
+  .banner-content h1 {
+    font-size: 40px;
+  }
+
+  .banner-content p {
+    font-size: 16px;
+  }
+
+}
+//TABLETS-SMALL
+@media (max-width: 992px) {
+
+  .banner {
+    justify-content: start;
+    padding: 20px 20px;
+  }
+
+  .banner-content {
+    max-width: 50%;
+  }
+
+  .banner-image {
+    width: 100%;
+  }
+
+  .banner-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    /* убираем маску */
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .banner::after {
+    display: none; /* убираем затемнение */
+  }
+
+}
+//MOBILES
+@media (max-width: 576px) {
+
+  .banner {
+    padding: 50px 15px;
+  }
+
+  .banner-content h1 {
+    font-size: 28px;
+    line-height: 1.2;
+  }
+
+  .banner-content p {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .banner-btn {
+    width: 100%;
+    padding: 12px;
+  }
+
+  .banner-image {
+    height: 250px;
+  }
+
+}
