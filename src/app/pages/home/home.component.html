@@ -1,16 +1,49 @@
 <main class="global">
   <section class="banner">
-
     <div class="banner-content">
       <h1>Подарите себе красивую улыбку</h1>
-      <p>Эффективное лечение зубов без боли с гарантией результата высококвалифицированными врачами с использованием современного оборудования</p>
+      <p>
+        Эффективное лечение зубов без боли с гарантией результата
+        высококвалифицированными врачами с использованием современного
+        оборудования
+      </p>
       <button class="banner-btn">Записаться на приём</button>
     </div>
 
     <div class="banner-image">
-      <img src="images/banner.jpg" alt="Dental Banner">
+      <img src="images/banner.jpg" alt="Dental Banner" />
+    </div>
+  </section>
+  <section class="clinic-services">
+    <div class="service-text"><h1>Услуги нашей клиники</h1></div>
+
+    <div class="slider">
+      <div
+        class="slides"
+        [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+      >
+        <div class="slide" *ngFor="let img of images">
+          <img [src]="img" alt="image" />
+        </div>
+      </div>
+
+      <button class="nav prev" (click)="prev()">&#10094;</button>
+      <button class="nav next" (click)="next()">&#10095;</button>
+
+      <!-- <div class="dots">
+        <span
+          *ngFor="let img of images; let i = index"
+          class="dot"
+          [class.active]="i === currentIndex"
+          (click)="goTo(i)"
+        ></span>
+      </div> -->
     </div>
 
+    <div class="service-text">
+      <h1>Хотите узнать предварительную стоимость лечения?</h1>
+      <p>*Стоимость лечения зависит от Вашего индивидуального случая</p>
+      <button class="price-button">Узнать стоимость лечения</button>
+    </div>
   </section>
 </main>
-
