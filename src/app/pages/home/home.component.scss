@@ -137,15 +137,17 @@
 
   .banner {
     padding: 50px 15px;
+    height: 250px;
+    min-height: auto;
   }
 
   .banner-content h1 {
-    font-size: 28px;
+    font-size: 20px;
     line-height: 1.2;
   }
 
   .banner-content p {
-    font-size: 14px;
+    font-size: 10px;
     margin-bottom: 20px;
   }
 

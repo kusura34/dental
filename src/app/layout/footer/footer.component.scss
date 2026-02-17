@@ -57,7 +57,7 @@ h2 {
   .footer {
     flex-wrap: wrap;
     flex-direction: row;
-    gap: 30px;
+    // gap: 30px;
   }
 
   .footer > div {
@@ -69,6 +69,13 @@ h2 {
     align-items: center;
     text-align: center;
   }
+
+  .footer [class^="container"] {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+}
 
 }
 
