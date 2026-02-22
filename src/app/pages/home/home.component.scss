@@ -220,3 +220,149 @@
     color: #e0ffff;
   }
 }
+
+/* ============================= */
+/* ABOUT SECTION */
+/* ============================= */
+
+.about-clinic {
+  background: #f4fbfc;
+  position: relative;
+  overflow: hidden;
+}
+
+/* контейнер как у banner */
+.about-container {
+  position: relative;
+  max-width: 85vw;
+  margin: 0 auto;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+/* ----------------------------- */
+/* LEFT (TEXT) */
+/* ----------------------------- */
+
+.about-left {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  color: #0f3c3f;
+}
+
+.about-left h2 {
+  font-size: 42px;
+  margin-bottom: 25px;
+  color: #118c94;
+}
+
+.about-left p {
+  font-size: 16px;
+  color: #355e63;
+  margin-bottom: 15px;
+  line-height: 1.7;
+}
+
+.about-left .about-bold {
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+/* ----------------------------- */
+/* ITEMS */
+/* ----------------------------- */
+
+.about-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.about-item img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.about-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #118c94;
+  margin-bottom: 6px;
+}
+
+.about-item p {
+  font-size: 14px;
+  color: #2f4f52;
+  line-height: 1.6;
+}
+
+/* ----------------------------- */
+/* RIGHT (IMAGE) */
+/* ----------------------------- */
+
+.about-right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.about-right img {
+  height: 100%;
+  object-fit: cover;
+  display: block;
+
+  /* растворение как в banner */
+  mask-image: linear-gradient(to left, black 65%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to left, black 65%, transparent 100%);
+}
+
+/* мягкий градиент перехода к фону */
+.about-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  height: 100%;
+  pointer-events: none;
+
+  background: linear-gradient(
+    to right,
+    rgba(244, 251, 252, 0) 0%,
+    rgba(244, 251, 252, 0.7) 60%,
+    #f4fbfc 100%
+  );
+}
+
+/* ----------------------------- */
+/* RESPONSIVE */
+/* ----------------------------- */
+
+@media (max-width: 992px) {
+  .about-container {
+    padding: 80px 20px;
+  }
+
+  .about-right {
+    position: relative;
+    height: auto;
+    justify-content: center;
+    margin-top: 40px;
+  }
+
+  .about-right img {
+    height: auto;
+    width: 100%;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
