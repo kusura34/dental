@@ -1,16 +1,286 @@
 <main class="global">
   <section class="banner">
-
     <div class="banner-content">
       <h1>Подарите себе красивую улыбку</h1>
-      <p>Эффективное лечение зубов без боли с гарантией результата высококвалифицированными врачами с использованием современного оборудования</p>
+      <p>
+        Эффективное лечение зубов без боли с гарантией результата
+        высококвалифицированными врачами с использованием современного
+        оборудования
+      </p>
       <button class="banner-btn">Записаться на приём</button>
     </div>
 
     <div class="banner-image">
-      <img src="images/banner.jpg" alt="Dental Banner">
+      <img src="images/banner.jpg" alt="Dental Banner" />
+    </div>
+  </section>
+  <section class="clinic-services">
+    <div class="service-text"><h1>Услуги нашей клиники</h1></div>
+
+    <div class="slider">
+      <div
+        class="slides"
+        [style.transform]="'translateX(-' + currentIndex * 100 + '%)'"
+      >
+        <div class="slide" *ngFor="let img of images">
+          <img [src]="img" alt="image" />
+        </div>
+      </div>
+
+      <button class="nav prev" (click)="prev()">&#10094;</button>
+      <button class="nav next" (click)="next()">&#10095;</button>
+
+      <!-- <div class="dots">
+        <span
+          *ngFor="let img of images; let i = index"
+          class="dot"
+          [class.active]="i === currentIndex"
+          (click)="goTo(i)"
+        ></span>
+      </div> -->
     </div>
 
+    <div class="service-text">
+      <h1>Хотите узнать предварительную стоимость лечения?</h1>
+      <p>*Стоимость лечения зависит от Вашего индивидуального случая</p>
+      <button class="price-button">Узнать стоимость лечения</button>
+    </div>
+  </section>
+  <section class="about-clinic">
+    <div class="about-container">
+      <div class="about-left">
+        <h2>О нашей клинике</h2>
+
+        <p class="about-description">
+          Стоматология Dental Clinic - это оказание доступной и качественной
+          медицинской помощи!
+        </p>
+
+        <p>
+          Нашим специалистам можно довериться и получить высококвалифицированную
+          врачебную услугу.
+        </p>
+
+        <p class="about-bold">
+          НАША КОМАНДА ПРОФЕССИОНАЛОВ РАБОТАЕТ РАДИ ВАШИХ УЛЫБОК КАЖДЫЙ ДЕНЬ!
+        </p>
+
+        <div class="about-items">
+          <div class="about-item">
+            <img src="/icons/zub-galochka.svg" alt="check" />
+            <div>
+              <h4>РЕШАЕМ ВОПРОС ЛЮБОГО УРОВНЯ СЛОЖНОСТИ</h4>
+              <p>
+                Предоставляем комплексное лечение, в котором принимают участие
+                несколько наших специалистов
+              </p>
+            </div>
+          </div>
+
+          <div class="about-item">
+            <img src="/icons/koshelyok.svg" alt="wallet" />
+            <div>
+              <h4>СТАВИМ РАЗУМНЫЕ ЦЕНЫ НА ЛЕЧЕНИЕ</h4>
+              <p>
+                План лечения всегда составляется в интересах пациента, а не ради
+                выгоды клиники
+              </p>
+            </div>
+          </div>
+
+          <div class="about-item">
+            <img src="/icons/med-sestra.svg" alt="nurse" />
+            <div>
+              <h4>ДОБРОЖЕЛАТЕЛЬНЫЙ И ВЕЖЛИВЫЙ ПЕРСОНАЛ</h4>
+              <p>
+                Наши стоматологи несут профессиональную ответственность за
+                результат лечения пациентов. Без сомнения, нам можно доверять.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <img src="/images/big-tooth.png" alt="tooth" />
+      </div>
+    </div>
+  </section>
+  <section class="safe-treatment">
+    <div class="container">
+      <h2 class="safe-treatment__title">
+        В нашей клинике есть все для комфортного безопасного лечения и даже
+        больше
+      </h2>
+
+      <div class="safe-treatment__grid">
+        <img src="/images/safe1.jpg" alt="" />
+        <img src="/images/safe2.jpg" alt="" />
+        <img src="/images/safe3.jpg" alt="" />
+        <img src="/images/safe4.jpg" alt="" />
+        <img src="/images/safe5.jpg" alt="" />
+        <img src="/images/safe6.jpg" alt="" />
+        <img src="/images/safe7.jpg" alt="" />
+        <img src="/images/safe8.jpg" alt="" />
+      </div>
+    </div>
+  </section>
+  <section class="reasons">
+    <div class="reasons-container">
+      <div class="reasons-left">
+        <div class="reasons__content">
+          <h2 class="reasons__title">
+            6 веских причин обратиться <br />
+            в <span>Dental Clinic</span>
+          </h2>
+
+          <div class="reasons__grid">
+            <div class="reason">
+              <div class="reason__icon"></div>
+              <div>
+                <h3>ПРОФЕССИОНАЛЬНАЯ КОМАНДА</h3>
+                <p>
+                  Наши врачи имеют большой опыт и высокий уровень квалификации
+                </p>
+              </div>
+            </div>
+
+            <div class="reason">
+              <div class="reason__icon"></div>
+              <div>
+                <h3>БЕЗ ОЧЕРЕДЕЙ</h3>
+                <p>Принимаем только по предварительной записи</p>
+              </div>
+            </div>
+
+            <div class="reason">
+              <div class="reason__icon"></div>
+              <div>
+                <h3>ЛЕЧЕНИЕ БЕЗ БОЛИ</h3>
+                <p>Используем современную систему обезболивания</p>
+              </div>
+            </div>
+
+            <div class="reason">
+              <div class="reason__icon"></div>
+              <div>
+                <h3>КВАЛИФИЦИРОВАННЫЙ ПЕРСОНАЛ</h3>
+                <p>Все доктора имеют стаж работы от 7 лет</p>
+              </div>
+            </div>
+
+            <div class="reason">
+              <div class="reason__icon"></div>
+              <div>
+                <h3>БЫСТРОЕ ПРОТЕЗИРОВАНИЕ</h3>
+                <p>Короткие сроки выполнения работ</p>
+              </div>
+            </div>
+
+            <div class="reason">
+              <div class="reason__icon"></div>
+              <div>
+                <h3>КАЧЕСТВЕННЫЕ МАТЕРИАЛЫ</h3>
+                <p>Используем материалы только премиум класса</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reasons-right">
+        <img src="/images/back-tooth.jpeg" alt="" />
+      </div>
+    </div>
+  </section>
+  <section class="team">
+    <div class="team-container">
+      <h2 class="team__title">Команда специалистов</h2>
+
+      <div class="team__grid">
+        <div class="team-card">
+          <div class="team-card__image">
+            <img src="/images/ava.dock.png" alt="" />
+          </div>
+          <h3>КАУНОВА НАТАЛЬЯ<br />АНДРЕЕВНА</h3>
+          <p>Стоматолог-терапевт, детский стоматолог</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card__image">
+            <img src="/images/ava.dock.png" alt="" />
+          </div>
+          <h3>КАРАПЕТЯН СЕРОБ<br />АРУТЮНОВИЧ</h3>
+          <p>Стоматолог-ортопед</p>
+        </div>
+
+        <div class="team-card">
+          <div class="team-card__image">
+            <img src="/images/ava.dock.png" alt="" />
+          </div>
+          <h3>ПЕТРОВ АЛЕКСАНДР<br />ВЛАДИМИРОВИЧ</h3>
+          <p>Челюстно-лицевой хирург, имплантолог</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="contacts">
+    <div class="contacts-container">
+      <div class="contacts-left">
+        <h2 class="contacts__title">Наши контакты</h2>
+
+        <div class="contacts__info">
+          <a href="tel:+74843972222">+7 (484) 397 22 22</a>
+          <a href="tel:+79105972222">+7 (910) 597 22 22</a>
+          <a href="mailto:dentalclic20@mail.ru" class="contacts__email">
+            dentalclic20&#64;mail.ru
+          </a>
+          <p>г. Обнинск, проспект Маркса 93, офис 1</p>
+        </div>
+
+        <div class="contacts__social">
+          <a href="#" aria-label="Instagram">
+            <img style="width: 25px" src="/icons/instagram.svg" alt="" />
+            <span></span>
+          </a>
+        </div>
+      </div>
+
+      <div class="contacts-right">
+        <!-- Вставляешь iframe Яндекс или Google карты -->
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?ll=36.6100,55.0950&z=17&text=Обнинск,+проспект+Маркса+93"
+          width="100%"
+          height="400"
+          frameborder="0"
+          allowfullscreen="true"
+        >
+        </iframe>
+      </div>
+    </div>
+  </section>
+  <section class="cta">
+    <div class="cta-container">
+      <div class="cta-image"></div>
+
+      <div class="cta-form">
+        <h2>Позвольте себе здоровую улыбку</h2>
+        <p class="cta-sub">
+          Перезвоним в течение 10–15 минут и подберём удобное время приёма
+        </p>
+
+        <form>
+          <input type="text" placeholder="Ваше имя" required />
+          <input type="tel" placeholder="+7 (___) ___-__-__" required />
+
+          <button type="submit">Записаться на приём</button>
+
+          <p class="policy">
+            Нажимая на кнопку, вы соглашаетесь с
+            <a href="#">политикой конфиденциальности</a>
+          </p>
+        </form>
+      </div>
+    </div>
   </section>
 </main>
-
