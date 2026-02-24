@@ -46,6 +46,113 @@
       <button class="price-button">Узнать стоимость лечения</button>
     </div>
   </section>
+
+  <!-- FOR_MOBILES -->
+  <section class="services-mobile">
+    <h2 class="section-title">Наши направления</h2>
+
+    <swiper-container
+      slides-per-view="1.15"
+      space-between="16"
+      pagination="true"
+    >
+      <!-- 1 -->
+      <swiper-slide>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="images/for-mobile/woman-patient-dentis.jpg.webp" alt="" />
+          </div>
+          <div class="service-body">
+            <h3>Терапевтическая стоматология</h3>
+            <ul>
+              <li>Лечение кариеса и его осложнений</li>
+              <li>Реставрации</li>
+              <li>Лечение корневых каналов</li>
+            </ul>
+            <button class="service-btn">Записаться</button>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <!-- 2 -->
+      <swiper-slide>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="images/for-mobile/woman-wearing-orthod.jpg.webp" alt="" />
+          </div>
+          <div class="service-body">
+            <h3>Ортодонтическая стоматология</h3>
+            <ul>
+              <li>Металлические, керамические, сапфировые брекеты</li>
+              <li>Съёмные и несъёмные аппараты</li>
+              <li>Лечение системой Invisalign</li>
+            </ul>
+            <button class="service-btn">Записаться</button>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <!-- 3 -->
+      <swiper-slide>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="images/for-mobile/female-dentist-teeth.jpg.webp" alt="" />
+          </div>
+          <div class="service-body">
+            <h3>Профилактическая стоматология</h3>
+            <ul>
+              <li>Профессиональная гигиена</li>
+              <li>Фторирование</li>
+              <li>Реминерализация</li>
+              <li>Обучение гигиене</li>
+            </ul>
+            <button class="service-btn">Записаться</button>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <!-- 4 -->
+      <swiper-slide>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="images/for-mobile/x-ray-teeth.jpg.webp" alt="" />
+          </div>
+          <div class="service-body">
+            <h3>Хирургическая стоматология</h3>
+            <ul>
+              <li>Удаления любой сложности</li>
+              <li>Имплантация</li>
+              <li>Коррекция челюстной кости</li>
+              <li>Лечение воспалений</li>
+              <li>Лечение травм</li>
+            </ul>
+            <button class="service-btn">Записаться</button>
+          </div>
+        </div>
+      </swiper-slide>
+
+      <!-- 5 -->
+      <swiper-slide>
+        <div class="service-card">
+          <div class="service-img">
+            <img src="images/for-mobile/smiling-dentist-expl.jpg.webp" alt="" />
+          </div>
+          <div class="service-body">
+            <h3>Ортопедическая стоматология</h3>
+            <ul>
+              <li>Металлокерамические коронки</li>
+              <li>Циркониевые</li>
+              <li>Цельнолитые</li>
+              <li>Съёмные протезы</li>
+              <li>Микропротезирование</li>
+            </ul>
+            <button class="service-btn">Записаться</button>
+          </div>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </section>
+
   <section class="about-clinic">
     <div class="about-container">
       <div class="about-left">
@@ -106,7 +213,7 @@
       </div>
     </div>
   </section>
-  <section class="safe-treatment">
+  <!-- <section class="safe-treatment">
     <div class="container">
       <h2 class="safe-treatment__title">
         В нашей клинике есть все для комфортного безопасного лечения и даже
@@ -124,7 +231,26 @@
         <img src="/images/safe8.jpg" alt="" />
       </div>
     </div>
-  </section>
+  </section> -->
+  <section class="safe-treatment">
+  <div class="container">
+    <h2 class="safe-treatment__title">
+      В нашей клинике есть все для комфортного безопасного лечения и даже больше
+    </h2>
+
+    <div class="safe-treatment__grid">
+      <img
+        *ngFor="let image of visibleImages"
+        [src]="image"
+        alt=""
+      />
+    </div>
+
+    <button class="safe-treatment__btn" (click)="toggleImages()">
+      {{ showAll ? 'Скрыть' : 'Показать ещё' }}
+    </button>
+  </div>
+</section>
   <section class="reasons">
     <div class="reasons-container">
       <div class="reasons-left">
