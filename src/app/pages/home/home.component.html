@@ -213,7 +213,8 @@
       </div>
     </div>
   </section>
-  <!-- <section class="safe-treatment">
+
+  <section class="safe-treatment">
     <div class="container">
       <h2 class="safe-treatment__title">
         В нашей клинике есть все для комфортного безопасного лечения и даже
@@ -221,36 +222,14 @@
       </h2>
 
       <div class="safe-treatment__grid">
-        <img src="/images/safe1.jpg" alt="" />
-        <img src="/images/safe2.jpg" alt="" />
-        <img src="/images/safe3.jpg" alt="" />
-        <img src="/images/safe4.jpg" alt="" />
-        <img src="/images/safe5.jpg" alt="" />
-        <img src="/images/safe6.jpg" alt="" />
-        <img src="/images/safe7.jpg" alt="" />
-        <img src="/images/safe8.jpg" alt="" />
+        <img *ngFor="let image of visibleImages" [src]="image" alt="" />
       </div>
-    </div>
-  </section> -->
-  <section class="safe-treatment">
-  <div class="container">
-    <h2 class="safe-treatment__title">
-      В нашей клинике есть все для комфортного безопасного лечения и даже больше
-    </h2>
 
-    <div class="safe-treatment__grid">
-      <img
-        *ngFor="let image of visibleImages"
-        [src]="image"
-        alt=""
-      />
+      <button class="safe-treatment__btn" (click)="toggleImages()">
+        {{ showAll ? "Скрыть" : "Показать ещё" }}
+      </button>
     </div>
-
-    <button class="safe-treatment__btn" (click)="toggleImages()">
-      {{ showAll ? 'Скрыть' : 'Показать ещё' }}
-    </button>
-  </div>
-</section>
+  </section>
   <section class="reasons">
     <div class="reasons-container">
       <div class="reasons-left">

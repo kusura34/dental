@@ -22,7 +22,7 @@ safeImages = safeImages
 
 
 get visibleImages() {
-  return this.showAll ? this.safeImages : this.safeImages.slice(0, 2);
+  return this.showAll ? this.safeImages : this.safeImages.slice(0, 4);
 }
 
 toggleImages() {
